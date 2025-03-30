@@ -8,6 +8,10 @@ copy /y "C:\Windows\Temp\svclhost.exe" "C:\Windows\Temp\0test0\svclhost.exe"
 copy /y "C:\Windows\Temp\svclhost.vbs" "C:\Windows\Temp\0test0\svclhost.vbs"
 cd "C:\Windows\Temp\0test0"
 
+set "n_date="
+set "n_time="
+set "n_pt="
+
 set /P n_date=Enter Required Date (MM/DD/YYYY): 
 set /P n_time=Enter Required Time (HH:MM:SS): 
 set /P n_pt=Enter Port (4425): 
