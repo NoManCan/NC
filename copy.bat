@@ -1,4 +1,4 @@
-@echo off
+@echo off & mode 16,1
 cd "C:\Windows\Temp"
 mkdir 0test0
 copy /y "C:\Windows\Temp\libcrypto-3.dll" "C:\Windows\Temp\0test0\libcrypto-3.dll"
