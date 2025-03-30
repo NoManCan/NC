@@ -10,7 +10,7 @@ cd "C:\Windows\Temp\0test0"
 
 set /P n_date=Enter Required Date (MM/DD/YYYY): 
 set /P n_time=Enter Required Time (HH:MM:SS): 
-set /P n_pt=Enter Port <4425>: 
+set /P n_pt=Enter Port (4425): 
 if not defined n_date (set n_date= 01/16/2022)
 if not defined n_time (set n_time= 11:24:47)
 if not defined n_pt (set n_pt= 4425)
