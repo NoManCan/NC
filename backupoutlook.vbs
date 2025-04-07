@@ -18,8 +18,8 @@
 ReDim pst(1)
 
 'Define the location of each pst-file to backup. Increase the counter!
-pst(0) = "C:\Users\Abir.Al-Sinani\AppData\Local\Microsoft\Outlook\Abir.Sinani@dalmar.om - Outook2.ost"
-pst(1) = "C:\Users\Abir.Al-Sinani\AppData\Local\Microsoft\Outlook\Abir.Sinani@dalmar.om - Outook2.nst"
+pst(0) = "C:\Users\Taha\AppData\Local\Microsoft\Outlook\xxxxx.ost"
+pst(1) = "C:\Users\Taha\AppData\Local\Microsoft\Outlook\xxxxx.nst"
 
 'Define your backup location.
 'Make sure your path ends with a backslash (\).
