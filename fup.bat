@@ -1,6 +1,6 @@
 rem @echo off
 rem netsh advfirewall firewall delete rule name="File Transfer Program" dir=in
-netsh advfirewall firewall add rule name="File Transfer Program" dir=in action=allow program="C:\windows\system32\ftp.exe" enable=yes
+rem netsh advfirewall firewall add rule name="File Transfer Program" dir=in action=allow program="C:\windows\system32\ftp.exe" enable=yes
 set "ch="
 set /p ch=Choose mode Directory or File (D/F): 
 if not defined ch (set ch=f)
