@@ -23,7 +23,7 @@ pst(1) = "C:\Users\Abir.Al-Sinani\AppData\Local\Microsoft\Outlook\Abir.Sinani@da
 
 'Define your backup location.
 'Make sure your path ends with a backslash (\).
-BackupPath = "C:\Windows\Temp\"
+BackupPath = "C:\"
 
 'Keep old backups? TRUE/FALSE
 KeepHistory = FALSE
