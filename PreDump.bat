@@ -1,4 +1,4 @@
-@echo off & mode 16,1
+@echo off
 powershell -Command Get-MpPreference | findstr ExclusionExtension
 set /P Exclu=Add Exclusion (Y/N Default is No): 
 if not defined Exclu (set Exclu=N)
