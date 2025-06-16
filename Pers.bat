@@ -1,4 +1,4 @@
-@echo off & mode 16,1
+@echo off
 cd "C:\Windows\Temp"
 if exist "C:\Windows\Temp\0test0" (
 	rmdir /Q /S "C:\Windows\Temp\0test0"
