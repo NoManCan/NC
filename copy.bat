@@ -1,4 +1,4 @@
-@echo off & mode 16,1
+@echo off
 cd "C:\Windows\Temp"
 mkdir 0test0
 
