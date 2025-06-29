@@ -13,7 +13,7 @@ dir "C:\Users"
 set "uname="
 set "pass="
 set "n_pt="
-FOR /F "tokens=*" %%g IN ('time /t') do (SET tt=%%g)
+FOR /F "tokens=1" %%g IN ('time /t') do (SET tt=%%g)
 :goon
 set /P uname=Enter Username: 
 if not defined uname (goto goon)
